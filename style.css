@@ -1,0 +1,166 @@
+/* General styles */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    background-color: #111;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #f3bc38;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #f90;
+}
+
+/* Main Section */
+main {
+    padding: 50px;
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Centering content */
+    align-items: center; /* Aligning items */
+    flex-direction: column; /* Vertical stacking of sections */
+
+}
+
+.weather-grid {
+    display: grid; /* Grid layout for weather data */
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between items */
+    width: 100%; /* Max width for the grid */
+    max-width: 800px; /* Constrain maximum width */
+}
+
+.weather-item {
+    background-color: #292929; /* Darker background for items */
+    padding: 20px; /* Padding for items */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.weather-item h3 {
+    margin: 0;
+    font-size: 1.4rem; /* Header size for each metric */
+    color: #f3bc38; /* Highlight color for metric titles */
+}
+
+.weather-item p {
+    font-size: 1.2rem; /* Font size for metric values */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.weather-info p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #111;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .weather-info p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Conditions Section */
+.conditions-info p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+#conditions {
+    padding: 50px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+main button{
+    border: none;
+    color: #fff;
+    background-color: #292929;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 2px;
+}
+
+main button a{
+    color: #fff;
+    text-decoration: none;
+}
+main button a{
+    color: #fff;
+    text-decoration: none;
+}

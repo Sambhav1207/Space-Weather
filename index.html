@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Space Weather Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Space Weather Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="data">
+            <div class="weather-grid">
+                <div class="weather-item">
+                    <h3>Solar Wind Speed</h3>
+                    <p><span id="solar-wind-speed">Loading...</span> km/s</p>
+                </div>
+                <div class="weather-item">
+                    <h3>Solar Flare Intensity</h3>
+                    <p><span id="solar-flare">Loading...</span></p>
+                </div>
+                <div class="weather-item">
+                    <h3>Geomagnetic Storm (Kp Index)</h3>
+                    <p><span id="kp-index">Loading...</span></p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <ul>
+                <li><p><b>Solar Wind Speed:</b> The speed at which charged particles from the Sun, primarily electrons and protons, flow through space, influencing space weather and Earth's magnetic field.</p></li>
+                <li><p><b>Solar Flare Intensity:</b> A measure of the brightness and energy release of sudden bursts of radiation from the Sun's surface, which can disrupt satellite communications and pose hazards to astronauts.</p></li>
+                <li><p><b>Geomagnetic Storm (Kp Index):</b> A scale (ranging from 0 to 9) that quantifies the disturbance in Earth's magnetic field caused by solar activity, indicating the potential impact on technology and navigation systems.</p></li>
+            </ul>
+        </section>
+<br>
+        <section>
+            <h3 style="margin-bottom: 0;">Affects of Solar Flares on Earth</h3>
+            <video width="1000" height="620" controls style="border: 2px solid white; margin-top: 25px;">
+                <source src="SolarFlare.mp4" type="video/mp4">
+            </video>
+        </section>
+        
+        <script>
+            // Function to refresh the sun image
+            function refreshSunImage() {
+                const sunImage = document.getElementById('sun-image');
+                const timestamp = new Date().getTime(); // Get the current timestamp
+                sunImage.src = `https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001435/GSFC_20171208_Archive_e001435~orig.jpg?${timestamp}`; // Append timestamp to avoid caching
+            }
+        
+            // Refresh the image every 60 seconds
+            setInterval(refreshSunImage, 60000);
+            // Refresh immediately on load
+            refreshSunImage();
+        </script>
+        
+    </main>
+
+
+    <footer>
+        <p>&copy; 2024 Space Weather Tracker</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
